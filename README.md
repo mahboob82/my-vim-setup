@@ -1,5 +1,5 @@
 # vim-config-template
-This Vim (GVIM) template organize my vim configuration setup very easily (Best for my personal workflow).
+This Vim (GVIM) template organizes my vim configuration setup very easily (serves best for my personal workflow).
 
 ## Who to use?
 
