@@ -1,0 +1,1 @@
+autocmd BufRead,BufNewFile *.bf90 set filetype=bf90

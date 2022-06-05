@@ -1,0 +1,268 @@
+" Clear all registers
+
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+
+" Don't try to be vi compatible
+" set nocompatible
+" set wildmenu
+" set wildmode=longest:full,full
+" set wildignorecase
+" set wildignore=\*.git/\*
+
+
+" Helps force plugins to load correctly when it is turned back on below
+" filetype on
+
+" TODO: Load plugins here (pathogen or vundle)
+
+" Turn on syntax highlighting
+" syntax on
+
+" For plugins to load correctly
+" filetype plugin indent on
+
+" TODO: Pick a leader key
+" let mapleader = ","
+
+
+
+" Security
+"set modelines=0
+
+" Show line numbers
+" set nu
+
+" Show file stats
+"set ruler
+
+" Blink cursor on error instead of beeping (grr)
+" set visualbell
+
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
+
+" Encoding
+set encoding=utf-8
+
+" Whitespace
+" set wrap   " or nowrap
+" set nolist  " or list 
+"set listchars=tab:>\ ,trait:.
+"
+" set nojoinspaces
+
+" imap jj <Esc>
+
+"set textwidth=79
+"set formatoptions=tcqrn1
+" set tabstop=4
+" set shiftwidth=4
+" set softtabstop=4
+" set expandtab
+"set noshiftround
+" set clipboard=unnamedplus
+" set cursorline
+" set confirm
+" set exrc
+" set backup
+" set backupdir=~/backup
+" set updatetime=300 " Reduce time for highlighting other references
+" set redrawtime=10000 " Allow more time for loading syntax on large files
+
+" Reselect visual selection after indenting
+" vnoremap < <gv
+" vnoremap > >gv
+
+" Maintain the cursor position when yanking a visual selection
+" http://ddrscott.github.io/blog/2016/yank-without-jank/
+" vnoremap y myy`y
+" vnoremap Y myY`y
+
+" Cursor motion
+"set scrolloff=3
+"set backspace=indent,eol,start
+" set matchpairs+=<:> " use % to jump between pairs
+
+" Easy insertion of a trailing ; or , from insert mode
+" imap ;; <Esc>A;<Esc>
+" imap ,, <Esc>A,<Esc>
+
+
+"runtime! macros/matchit.vim
+
+" Move up/down editor lines
+"nnoremap j gj
+"nnoremap k gk
+
+" Allow hidden buffers
+" set hidden
+
+" Rendering
+" set ttyfast
+
+" When text is wrapped, move by terminal rows,not lines, unless a count is provided
+" noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+" noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" Paste replace visual selection without copying it
+" vnoremap <leader>p "_dP
+
+" Keep it centered
+" nnoremap n nzzzv
+" nnoremap N Nzzzv
+" nnoremap J mzJ`z
+
+
+" Status bar
+" set laststatus=2
+
+" Last line
+"set showmode
+set showcmd
+
+" Searching
+"nnoremap / /\v
+"vnoremap / /\v
+"set hlsearch
+
+" Toggle highlights
+" set hlsearch!
+" nnoremap <F3> :set hlsearch!<CR>
+" filetype plugin on
+
+" set incsearch
+" set ignorecase
+" set smartcase
+" set showmatch
+" map <leader><space> :let @/=''<cr> " clear search
+
+" Remap help key.
+" inoremap <F1> <ESC>:set invfullscreen<CR>a
+" nnoremap <F1> :set invfullscreen<CR>
+" vnoremap <F1> :set invfullscreen<CR>
+
+" Textmate holdouts
+
+" Formatting
+" map <leader>q gqip
+
+" Visualize tabs and newlines
+" set listchars=tab:▸\ ,eol:¬
+
+" Or use your leader key + l to toggle on/off
+"map <leader>l :set list!<CR> " Toggle tabs and EOL
+
+" Color scheme (terminal)
+set t_Co=256
+"set background=dark
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
+" in ~/.vim/colors/ and uncomment:
+"colorscheme solarized
+
+"==================================================
+" PLUGIN INSTALL / ENTRY
+"==================================================
+call plug#begin('~/.vim/plugged')
+    Plug 'itchyny/lightline.vim'
+    Plug '~/pix2emplug'
+    "Plug 'vim-airline/vim-airline'
+    "Plug 'vim-airline/vim-airline-themes'
+    "Plug 'sirver/ultisnips'
+    "Plug 'vifm/vifm.vim'
+    Plug 'scrooloose/nerdtree'
+    " Plug 'vifm/vifm-colors'
+    " Plug 'honza/vim-snippets'
+    Plug 'roman/golden-ratio'
+    " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    " Plug 'junegunn/fzf.vim'
+    "Plug 'junegunn/fzf'
+    " Plug 'christoomey/vim-titlecase'
+    Plug 'tpope/vim-commentary'
+    Plug 'miyakogi/conoline.vim'
+    Plug 'tpope/vim-eunuch'
+    " Plug 'tommcdo/vim-exchange'
+    " Plug 'farmergreg/vim-lastplace'
+    " Plug 'tommcdo/vim-lion'
+    " Plug 'sickill/vim-pasta'
+    " Plug 'sheerun/vim-polyglot'
+    " Plug 'unblevable/quick-scope'
+    " Plug 'tpope/vim-repeat'
+    " Plug 'airblade/vim-rooter'
+    " Plug 'mhinz/vim-sayonara'
+    " Plug 'terryma/vim-smooth-scroll'
+    " Plug 'andrewradev/splitjoin.vim'
+    " Plug 'tpope/vim-surround'
+    " Plug 'wellle/targets.vim'
+    " Plug 'tpope/vim-unimpaired'
+    " Plug 'mg979/vim-visual-multi'
+    " Plug 'nelstrom/vim-visual-star-search'
+    " Plug 'liuchengxu/vim-which-key'
+
+call plug#end()
+
+"==================================================
+
+" Commentary usage
+" gcc on nomral mode
+" 2gcc will comment 2 lines 
+" 2gcc will uncomment if already commented
+" gc 2j ==> comment 3lines
+" gc 2j ==> uncomment 3lines
+" gc 2k ==> comment 2 lines upward
+" gc ==> on visual mode
+" gcap ==> comment out a paragraph
+" hello world
+"
+" hello worldiy
+" :g/hello/commentary<cr>
+" :1,5Commentary
+"
+"autocmd FileType BLUPF9 setlocal commentstring=#\ %s
+
+" Note: It's not easy to remap gc to Ctrl+rightslash
+
+
+
+" function! CommentOut() abort
+"     start
+"     call feedkeys('normal! <g-c>')
+" endfunction
+
+"Conoline plugin
+"================================================
+let g:conoline_auto_enable = 1
+let g:conoline_use_colorscheme_default_normal=1
+
+let g:conoline_color_normal_dark = 'guibg=#333333 guifg=#dddddd'
+let g:conoline_color_insert_dark = 'guibg=black guifg=white'
+"If you set 'background=light', change the suffix from 'dark' to 'light'.
+
+" For dark colorschemes
+let g:conoline_color_normal_dark = 'guibg=#181818'
+let g:conoline_color_normal_nr_dark = 'guibg=#181818'
+let g:conoline_color_insert_dark = 'guibg=#000000'
+let g:conoline_color_insert_nr_dark = 'guibg=#000000'
+
+" For light colorschemes
+let g:conoline_color_normal_light = 'guibg=#eaeaea'
+let g:conoline_color_normal_nr_light = 'guibg=#eaeaea'
+let g:conoline_color_insert_light = 'guibg=#ffffff'
+let g:conoline_color_insert_nr_light = 'guibg=#ffffff'
+
+" Use colors defined by colorscheme in normal mode.
+let g:conoline_use_colorscheme_default_normal = 1 
+" Use colors defined by colorscheme in insert mode.
+let g:conoline_use_colorscheme_default_insert = 1
+
+"========================================================================
+"
+
+
+
+
