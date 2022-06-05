@@ -15,7 +15,7 @@ This Vim (GVIM) template organizes my vim configuration setup very easily (serve
 ## Why I use this config?
 
 <p> As I found it difficult to keep track of a large .vimrc file with 100's of lines of configuration, 
-I was inspired by an advance VIM user (programmer), and followed her approach to keep track of my vim configs and plugins.
+I was inspired by an advance VIM user (programmer) on youtube, and followed her approach to keep track of my vim configs and plugins.
 Certainly this may not be best approach, but this is working nicely for me now at least.
 </p>
 <p>
