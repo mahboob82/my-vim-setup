@@ -27,31 +27,50 @@ Certainly this may not be best approach, but this is working nicely for me now a
   
 ## How to structure vim directory
 
-1.UserDirectory
+1. UserDirectory
 	- .vimrc
+	
 	- .vim
+	
 		- autoload
+		
 			- plug.vim
+			
 		- colors
+		
 			- jellybeans.vim
+			
 		- config
+		
 			- plugins
+			
 				- plugin1.vim
+				
 				- plugin2.vim
+				
 				- plugin3.vim
 			
 			- commonmaps.vim
+			
 			- general.vim
+			
 			- leadermaps.vim
+			
 			- ikeymaps.vim
+			
 			- nkeymaps.vim
+			
 			- vkeymaps.vim
+			
 			- scriptrunner.vim
 			
 		- ftdetect
+		
 		- plugged
+		
 		- syntax
-		-vim-plug-master
+		
+		- vim-plug-master
 		
 	
 	
