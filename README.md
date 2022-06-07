@@ -25,9 +25,9 @@ Certainly this may not be best approach, but this is working nicely for me now a
   2. By a simple commenting or uncommenting a one line statement, I can either keep the plugin or get rid of it during vim loading.
   
   
-## How to structure vim directory
+## How did I structured my vim directory?
 
-1. UserDirectory
+1. $USERHOME
 	- .vimrc
 	- .vim/
 		- autoload/
