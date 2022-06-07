@@ -30,19 +30,19 @@ Certainly this may not be best approach, but this is working nicely for me now a
 1. UserDirectory
 	- .vimrc
 	
-	- .vim
+	- .vim/
 	
-		- autoload
+		- autoload/
 		
 			- plug.vim
 			
-		- colors
+		- colors/
 		
 			- jellybeans.vim
 			
-		- config
+		- config/
 		
-			- plugins
+			- plugins/
 			
 				- plugin1.vim
 				
@@ -64,11 +64,23 @@ Certainly this may not be best approach, but this is working nicely for me now a
 			
 			- scriptrunner.vim
 			
-		- ftdetect
+		- ftdetect/
 		
-		- plugged
+		- plugged/
 		
-		- syntax
+			- plugin1/
+		
+			- plugin2/
+			
+			- plugin3/
+			
+		
+		- syntax/
+			
+			- sample1
+			
+			- sample2
+			
 		
 		- vim-plug-master
 		
