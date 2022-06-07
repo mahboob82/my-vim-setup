@@ -25,3 +25,34 @@ Certainly this may not be best approach, but this is working nicely for me now a
   2. By a simple commenting or uncommenting a one line statement, I can either keep the plugin or get rid of it during vim loading.
   
   
+## How to structure vim directory
+
+1.UserDirectory
+	- .vimrc
+	- .vim
+		- autoload
+			- plug.vim
+		- colors
+			- jellybeans.vim
+		- config
+			- plugins
+				- plugin1.vim
+				- plugin2.vim
+				- plugin3.vim
+			
+			- commonmaps.vim
+			- general.vim
+			- leadermaps.vim
+			- ikeymaps.vim
+			- nkeymaps.vim
+			- vkeymaps.vim
+			- scriptrunner.vim
+			
+		- ftdetect
+		- plugged
+		- syntax
+		-vim-plug-master
+		
+	
+	
+
