@@ -32,16 +32,13 @@ Certainly this may not be best approach, but this is working nicely for me now a
 	- .vim/
 		- autoload/
 			- plug.vim
-			
 		- colors/
 			- jellybeans.vim
-			
 		- config/
 			- plugins/
 				- plugin1.vim
 				- plugin2.vim
 				- plugin3.vim
-			
 			- commonmaps.vim
 			- general.vim
 			- leadermaps.vim
@@ -49,22 +46,16 @@ Certainly this may not be best approach, but this is working nicely for me now a
 			- nkeymaps.vim
 			- vkeymaps.vim
 			- scriptrunner.vim
-			
-					
 		- plugged/
 			- plugin1/
 			- plugin2/
 			- plugin3/
-			
 		- ftdetect/
 			- lang_sample1.vim
 			- lang_sample2.vim
-		
 		- syntax/
 			- lang_sample1.vim
 			- lang_sample2.vim
-			
-		
 		- vim-plug-master
 		
 	
