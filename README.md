@@ -27,7 +27,7 @@ Certainly this may not be best approach, but this is working nicely for me now a
   
 ## How did I structured my vim directory?
 
-1. $USERHOME
+$USERHOME
 	- .vimrc
 	- .vim/
 		- autoload/
